@@ -78,13 +78,13 @@
             <small class="form-text smalltext">(both current & delinquent)</small>
             <div class="input-group mb-3">
                 <span class="input-group-text">$</span>
-                <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input id="unpaidInput" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
             </div>
 
             <label class="form-label">What is your total credit limit for all your cards?</label>
             <div class="input-group mb-3">
                 <span class="input-group-text">$</span>
-                <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input id="totalLimitInput" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
             </div>
 
             <div class="buttoncontainer" onclick="estimate()">
@@ -96,11 +96,12 @@
         
             <hr>
             <div class="row">
-                <div class="col-6" style="text-align: center;">
-                    <h3>Your Score</h3>
+                <div class="col-4" style="text-align: center;">
+                    <h3 id="score">Your Score</h3>
                     <h1 style="font-size: xx-large;">###</h1>
+                    <small class="form-text smalltext" style="margin-top: -8px;">Disclaimer &#128712;</small>
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <img src="creditscorerange.png" style="width: 100%;">
                 </div>
             </div>
