@@ -4,6 +4,7 @@ function estimate(){
     paymentsOnTime_SCALED = document.querySelector('input[name="paymentRadioOptions"]:checked').value;
     ageOfCredit_SCALED = document.querySelector('input[name="ageRadioOptions"]:checked').value;
     utilization_SCALED = document.querySelector('input[name="utilizationRadioOptions"]:checked').value;
+    recent_SCALED = document.querySelector('input[name="recentRadioOptions"]:checked').value;
 
     // NEED TO SCALE
     balanceValue = document.getElementById('unpaidInput').value;
@@ -21,7 +22,7 @@ function estimate(){
         balanceRatio_SCALED = 0;
     }
 
-    creditLimit_SCALED = min(1, creditLimitValue/22000);
+    creditLimit_SCALED = Math.min(1, creditLimitValue/22000);
 
     // CALCULATE CREDIT SCORE ESTIMATE RATIO BASED ON WEIGHTED IMPORTANCE
     // Payment history: 40%
@@ -31,5 +32,11 @@ function estimate(){
     // Recent credit: 5%
     // Available credit: 3%
 
-    finalRatio = (paymentsOnTime_SCALED * 0.4) + (ageOfCredit_SCALED * 0.21) + (utilization_SCALED * 0.2) + (balanceRatio_SCALED * 0.11) + (creditLimit_SCALED * 0.03)
+    finalRatio = (paymentsOnTime_SCALED * 0.4) + (ageOfCredit_SCALED * 0.21) + (utilization_SCALED * 0.2)
+        + (balanceRatio_SCALED * 0.11) + (recent_SCALED * 0.05) + (creditLimit_SCALED * 0.03);
+
+    // 300 to 850 is a range of 550
+    estimatedScore = 300 + Math.round(550 * finalRatio)
+
+    document.getElementById("score").innerHTML = estimatedScore;
 }
