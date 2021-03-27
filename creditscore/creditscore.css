@@ -5,11 +5,10 @@
     border-color: white;
     color: white;
     padding: 30px;
+    margin: 15px;
     width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Karla', sans-serif;
     box-shadow: 0 4px 12px 0 rgba(54, 21, 21, 0.3);
+    font-family: 'Karla', sans-serif;
 }
 
 .form-label {
@@ -80,7 +79,7 @@
   }
 
   
-  .indexbutton {
+  .estimatebutton {
     position: relative;
     height: 50px;
     width: 280px;
@@ -92,6 +91,7 @@
     overflow: hidden;
     box-shadow: 0 4px 12px 0 rgba(54, 21, 21, 0.3);
     z-index: -2;
+    color: white;
   }
 
   .fill {
@@ -105,13 +105,23 @@
     z-index: -1;
     transition: all 0.4s ease;
   }
-
-  .fill-two {
-    background-image: linear-gradient(to right, #00BCD4, #E040FB);
-  }
   
   .buttoncontainer:hover .fill{
     -webkit-animation: gradient 3s ease infinite;
     -moz-animation: gradient 3s ease infinite;
     animation: gradient 3s ease infinite;
   }
+
+  #slide {
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    transition: 1s;
+}
+
+.buttoncontainer:hover #slide {
+    transition: 1s;
+    left: 0;
+}
