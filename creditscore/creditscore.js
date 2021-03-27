@@ -1,4 +1,8 @@
 
 function estimate(){
-    document.getElementById('slider').classList.toggle('closed');
+    var estimateModal = new bootstrap.Modal(document.getElementById('estimateModal'), {
+        keyboard: false,
+        backdrop: false,
+    });
+    estimateModal.toggle();
 }

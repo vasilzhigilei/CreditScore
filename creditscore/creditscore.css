@@ -7,6 +7,7 @@
     padding: 30px;
     margin: 15px;
     width: 550px;
+    height: 725px;
     box-shadow: 0 4px 12px 0 rgba(54, 21, 21, 0.3);
     font-family: 'Karla', sans-serif;
 }
@@ -25,6 +26,12 @@
     margin-top: -12px;
     margin-bottom: 8px;
 }
+
+hr { 
+    border: 0; 
+    height: 2px !important; 
+    background-color: white;
+  }
 
 .background-gradient {
     background-image: linear-gradient(to right top, #063171, #024a8c, #0264a5, #0d7fbe, #219bd6);
@@ -111,17 +118,3 @@
     -moz-animation: gradient 3s ease infinite;
     animation: gradient 3s ease infinite;
   }
-
-  #slide {
-    position: absolute;
-    left: -100px;
-    width: 100px;
-    height: 100px;
-    background: blue;
-    transition: 1s;
-}
-
-.buttoncontainer:hover #slide {
-    transition: 1s;
-    left: 0;
-}
