@@ -24,5 +24,12 @@ function estimate(){
     creditLimit_SCALED = min(1, creditLimitValue/22000);
 
     // CALCULATE CREDIT SCORE ESTIMATE RATIO BASED ON WEIGHTED IMPORTANCE
-    
+    // Payment history: 40%
+    // Age: 21%
+    // Credit utilization: 20%
+    // Balances: 11%
+    // Recent credit: 5%
+    // Available credit: 3%
+
+    finalRatio = (paymentsOnTime_SCALED * 0.4) + (ageOfCredit_SCALED * 0.21) + (utilization_SCALED * 0.2) + (balanceRatio_SCALED * 0.11) + (creditLimit_SCALED * 0.03)
 }
