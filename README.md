@@ -6,8 +6,8 @@ DEMO: https://www.zhigilei.com/creditscoredemo
 Submission: https://devpost.com/software/embeddable-credit-score-calculator
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vasilzhigilei/CreditScore/master/meta/creditscore.png" height="650px">
-  <img src="https://raw.githubusercontent.com/vasilzhigilei/CreditScore/master/meta/insidearticle.png" height="650px">
+  <img src="https://raw.githubusercontent.com/vasilzhigilei/CreditScore/master/meta/creditscore.png" width="48%">
+  <img src="https://raw.githubusercontent.com/vasilzhigilei/CreditScore/master/meta/insidearticle.png" width="48%">
 </p>
 
 <h6 align="center"><i>[Credit score estimator (left), embedded into a finance article (right)]</i></h6>
